@@ -1,9 +1,14 @@
 <?php
 
+use App\DimensiBonusGaji;
 use App\DimensiCustomer;
 use App\DimensiDepartemenPegawai;
+use App\DimensiGajiPegawai;
 use App\DimensiKategoriProduk;
 use App\DimensiMetodePembayaran;
+use App\DimensiPegawai;
+use App\DimensiProduk;
+use App\DimensiStok;
 use App\DimensiSupplier;
 use App\DimensiWaktuBonus;
 use App\DimensiWaktuKerja;
@@ -21,6 +26,7 @@ class oneSeeder extends Seeder
      */
     public function run()
     {
+        /* non-relational */
         factory(DimensiCustomer::class, 10)->create();
         factory(DimensiDepartemenPegawai::class, 5)->create();
         factory(DimensiKategoriProduk::class, 10)->create();
@@ -31,5 +37,12 @@ class oneSeeder extends Seeder
         factory(DimensiWaktuStok::class, 10)->create();
         factory(DimensiWaktuTransaksiCustomer::class, 10)->create();
         factory(DimensiWaktuTransaksiPengadaan::class, 10)->create();
+        /* relational */
+        factory(DimensiBonusGaji::class, 10)->create();
+        factory(DimensiGajiPegawai::class, 10)->create();
+        factory(DimensiPegawai::class, 10)->create();
+        factory(DimensiStok::class, 10)->create();
+        factory(DimensiProduk::class, 10)->create();
+
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\DimensiBonusGaji;
 use Illuminate\Database\Seeder;
 
 class DimensiGajiPegawaiSeeder extends Seeder
@@ -11,6 +12,6 @@ class DimensiGajiPegawaiSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory(DimensiBonusGaji::class)->create();
     }
 }
