@@ -15,6 +15,9 @@ use App\DimensiWaktuKerja;
 use App\DimensiWaktuStok;
 use App\DimensiWaktuTransaksiCustomer;
 use App\DimensiWaktuTransaksiPengadaan;
+use App\FaktaPenggajian;
+use App\FaktaTransaksiCustomer;
+use App\FaktaTransaksiPengadaan;
 use Illuminate\Database\Seeder;
 
 class oneSeeder extends Seeder
@@ -43,6 +46,10 @@ class oneSeeder extends Seeder
         factory(DimensiPegawai::class, 10)->create();
         factory(DimensiStok::class, 10)->create();
         factory(DimensiProduk::class, 10)->create();
+        /* fakta */
+        factory(FaktaPenggajian::class, 10)->create();
+        factory(FaktaTransaksiCustomer::class, 10)->create();
+        factory(FaktaTransaksiPengadaan::class, 10)->create();
 
     }
 }
