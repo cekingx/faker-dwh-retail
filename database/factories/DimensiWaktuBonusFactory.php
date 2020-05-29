@@ -7,6 +7,6 @@ use Faker\Generator as Faker;
 
 $factory->define(DimensiWaktuBonus::class, function (Faker $faker) {
     return [
-        //
+        "tanggal" => $faker->date($format = 'Y-m-d', $max = 'now')
     ];
 });

@@ -8,5 +8,6 @@ use Faker\Generator as Faker;
 $factory->define(DimensiMetodePembayaran::class, function (Faker $faker) {
     return [
         //
+        "nama_pembayaran" => $faker->word
     ];
 });

@@ -11,6 +11,8 @@ MySQL - 10.4.11-MariaDB : Database - db_retail_inmon
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+DROP DATABASE IF EXISTS `db_retail_inmon`;
+CREATE DATABASE `db_retail_inmon`;
 USE `db_retail_inmon`;
 
 /*Table structure for table `tb_dimensi_customer` */
@@ -23,7 +25,7 @@ CREATE TABLE `tb_dimensi_customer` (
   `no_telp` varchar(13) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `alamat` text DEFAULT NULL,
-  `negara` varchar(25) DEFAULT NULL,
+  `negara` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_customer`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -87,8 +89,8 @@ CREATE TABLE `tb_dimensi_supplier` (
   `no_telp` varchar(13) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `alamat` text DEFAULT NULL,
-  `toko` varchar(25) DEFAULT NULL,
-  `negara` varchar(25) DEFAULT NULL,
+  `toko` varchar(100) DEFAULT NULL,
+  `negara` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_supplier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -190,7 +192,7 @@ CREATE TABLE `tb_dimensi_pegawai` (
   `no_telp` varchar(13) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `alamat` text DEFAULT NULL,
-  `negara` varchar(25) DEFAULT NULL,
+  `negara` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id_pegawai`),
   KEY `id_departemen` (`id_departemen`),
   CONSTRAINT `tb_dimensi_pegawai_ibfk_1` FOREIGN KEY (`id_departemen`) REFERENCES `tb_dimensi_departemen_pegawai` (`id_departemen_pegawai`)

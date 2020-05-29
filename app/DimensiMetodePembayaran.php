@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class DimensiMetodePembayaran extends Model
 {
     public $timestamps = false;
-    protected $table = "tb_dimensi_waktu_bonus";
+    protected $table = "tb_dimensi_metode_pembayaran";
     protected $fillable = [
-        "tanggal"
+        "nama_pembayaran"
     ];
 }
